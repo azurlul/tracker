@@ -7,6 +7,7 @@ import os
 # replace with your own Clash of Clans API token
 token = ""
 
+# replace with your own webhook
 webhook_url = ""
 
 # read player tags and initial names from players.json file
