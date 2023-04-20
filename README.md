@@ -5,4 +5,4 @@
 
 
 
-Context: Used by me a long time ago to keep a track of players with "stange" stones bases. (You can find all tags in "players.json")
+Used by me a long time ago to keep a track of players with "stange" stones bases. (You can find all tags in "players.json")
