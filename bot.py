@@ -5,9 +5,9 @@ import datetime
 import os
 
 # replace with your own Clash of Clans API token
-token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImZkMjZhMGEyLTU4MTgtNDllOS1hNTBhLTkwMDZhZDExOGRjOCIsImlhdCI6MTY4MTkyNDE2MSwic3ViIjoiZGV2ZWxvcGVyLzU1YjY1NzE1LTYyNTItZTMyMy1lODQ4LTc4MTFiY2ZhNzFhZiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjkyLjE1OS42MC4xOTIiXSwidHlwZSI6ImNsaWVudCJ9XX0.ZGicFdEsBJYI1ap7ZvGBAAHpzPcVgL7ugMVyZqGovfiX_ZvoLPu7Hf_S8eoGcKHjwAAey_mvFSiVhxRvD31ZhA"
+token = ""
 
-webhook_url = "https://discord.com/api/webhooks/1098553257065975928/BXgqsrFapiBNa1MJmMBq7YrhObpv4T_tYTXPgd06GABnH2nA-cvLOdaiCQ_4Dd1W4WwU"
+webhook_url = ""
 
 # read player tags and initial names from players.json file
 with open("players.json", encoding="utf-8") as f:
