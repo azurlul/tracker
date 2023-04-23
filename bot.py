@@ -4,13 +4,9 @@ import json
 import datetime
 import os
 
-# replace with your own Clash of Clans API token
 token = ""
-
-# replace with your own webhook
 webhook_url = ""
 
-# read player tags and initial names from players.json file
 with open("players.json", encoding="utf-8") as f:
     players = json.load(f)
 
@@ -41,7 +37,6 @@ while True:
                     }
                     requests.post(webhook_url, json=payload)
                     player["name"] = player_response["name"]
-                    # append log message to name_changes.log file
                     with open("nc.log", "a", encoding="utf-8") as log_file:
                         log_file.write(log_message)
                 else:
@@ -69,7 +64,7 @@ while True:
                 requests.post(webhook_url, json=payload)
                 with open("ban.log", "a", encoding="utf-8") as log_file:
                     log_file.write(log_message)
-                invalid_tags.append(player['tag'])  # add invalid tag to list
+                invalid_tags.append(player['tag'])
 
         players = [p for p in players if p['tag'] not in invalid_tags]
 
