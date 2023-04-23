@@ -1,6 +1,7 @@
 # Tracker
 - A python program to keep a track of clash of clans players nickname changes history and bans.
-- This program will update the json automatically and send a webhook notification to a discord channel.
+- Discord webhook integration to notify the user via a discord channel.
+- It will remove from "players.json" the tags that are banned and will automatically change the names.
 - Re-check the updated "players.json" list every 5 minutes.
 
 
