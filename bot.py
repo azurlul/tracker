@@ -15,15 +15,13 @@ with open("players.json", encoding="utf-8") as f:
     players = json.load(f)
 
 while True:
-    invalid_tags = []  # list to store invalid player tags
+    invalid_tags = []
     try:
         for player in players:
             try:
-                # get player information
                 player_url = f"https://api.clashofclans.com/v1/players/%23{player['tag']}"
                 player_response = requests.get(player_url, headers={"Authorization": f"Bearer {token}"}).json()
-
-                # check if the player's name has changed
+                
                 if player_response["name"] != player["name"]:
                     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     log_message = f"[DETECTED]: {timestamp} | #{player['tag']} | Old NC: {player['name']} | New NC: {player_response['name']}\n"
@@ -50,6 +48,7 @@ while True:
                     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     log_message = f"[NOTHING]: {timestamp} | #{player['tag']} | {player['name']}\n"
                     print(log_message)
+                    
             except KeyError:
                 timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 log_message = f"[BANNED]: {timestamp} | #{player['tag']} ({player['name']}) has been banned!\n"
@@ -72,14 +71,11 @@ while True:
                     log_file.write(log_message)
                 invalid_tags.append(player['tag'])  # add invalid tag to list
 
-        # remove invalid tags from players list
         players = [p for p in players if p['tag'] not in invalid_tags]
 
-        # write updated player names to players.json file
         with open("players.json", "w", encoding="utf-8") as f:
             json.dump(players, f, ensure_ascii=False)
 
-        # wait for 3 minutes before checking again
         for i in range(180, 0, -1):
             minutes = i // 60
             seconds = i % 60
@@ -90,5 +86,4 @@ while True:
 
     except Exception as e:
         print(f"Error occurred: {e}\n")
-        # wait for 1 minute before retrying
         time.sleep(60)
