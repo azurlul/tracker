@@ -4,7 +4,7 @@ import json
 import datetime
 import os
 
-token = ""
+apikey = ""
 webhook_url = ""
 
 with open("players.json", encoding="utf-8") as f:
@@ -16,7 +16,7 @@ while True:
         for player in players:
             try:
                 player_url = f"https://api.clashofclans.com/v1/players/%23{player['tag']}"
-                player_response = requests.get(player_url, headers={"Authorization": f"Bearer {token}"}).json()
+                player_response = requests.get(player_url, headers={"Authorization": f"Bearer {apikey}"}).json()
                 
                 if player_response["name"] != player["name"]:
                     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
