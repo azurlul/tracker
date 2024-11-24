@@ -1,6 +1,6 @@
 # Tracker
 
-A simple python script to track players using <a href="https://developer.clashofclans.com/">Clash of Clans API</a> and <a href="https://www.youtube.com/watch?v=fKksxz2Gdnc">Discord Webhooks</a> to notify the user.<br/><br/>
+A simple python script to track players using <a href="https://developer.clashofclans.com/">Clash of Clans API</a> and <a href="https://www.youtube.com/watch?v=fKksxz2Gdnc">Discord Webhooks</a> to notify the user.<br/>
 - Change the tags you want to track inside of **"players.json" (e.g: [{"tag": "XXX", "name": "xxx"}])** <br/>
 - Replace **"apikey"** with your own API key to be able to make requests.<br/>
 - If you wish to be notified on discord replace **"webhook_url"** with your own URL, if not results will be saved anyways in the logfiles. <br/>
