@@ -16,6 +16,6 @@ py tracker.py
 ```
 
 ### PoC
-View inside of "nc.log" | Webhook result in Discord
+View inside of "ban.log" | Webhook result in Discord
 --- | ---
 ![](img/1.PNG) | ![](img/2.PNG)
