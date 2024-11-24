@@ -18,4 +18,4 @@ py tracker.py
 ### PoC
 View inside of "nc.log" | Webhook result in Discord
 --- | ---
-![](img/1.png) | ![](img/2.png)
+![](img/1.PNG) | ![](img/2.PNG)
