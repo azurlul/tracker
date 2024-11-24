@@ -76,7 +76,7 @@ while True:
         players = [p for p in players if p['tag'] not in invalid_tags]
 
         with open("players.json", "w", encoding="utf-8") as f:
-            json.dump(players, f, ensure_ascii=False, indent=4)
+            json.dump(players, f, ensure_ascii=False)
 
         time.sleep(300)
         os.system('cls' if os.name == 'nt' else 'clear')
